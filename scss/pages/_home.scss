@@ -1,0 +1,97 @@
+@import "../abstracts/variables";
+@import"../abstracts/mixing";
+
+/* index */
+main{
+  .main-index{
+    @include flex(column);
+    width: 95%;
+    border: 0.5rem solid #d2c3e3;
+    border-radius: 50px;
+    margin: auto;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+      
+      .main-index-img {
+        img{
+          width: 85%;
+          padding: 1rem 0 0 1.5rem;
+        }
+      }
+      .main-index-txt{
+        h1{
+          font-size: 1rem;
+          text-align: end;
+          padding:0 1.5rem 1.5rem 0;
+          color: $color-secundario;
+          font-family: "PT Sans", sans-serif;
+          font-style: italic;
+          font-weight: 400;
+        }
+      }
+  }
+}
+
+section{
+  .section-index-img{
+    @include grid (grid, 1fr 2fr, repeat(2, 50%));
+    gap: 0.8rem;
+    margin:1rem 1rem 3rem 1rem;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit:cover;
+      border-radius: 25px;
+    }
+  }
+  .section-index-img-2{
+    grid-row: span 2;
+  }
+  .section-index-text{
+    width: 85%;
+  margin: auto;
+  padding: 0 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: $color-secundario;
+  font-family: "Quicksand", sans-serif;
+  span{
+    font-weight: bold;
+  }
+  }
+}
+/* estilo tablet */
+@media screen and (min-width:768px){
+main .main-index div.main-index-txt h1{
+  font-size: 1.5rem;
+  padding-right: 4rem;
+      }
+
+  .section-index-img{
+    margin-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .section-index p{
+    font-size: 1.5rem;
+  }
+}
+
+/* estilo desktop */
+@media screen and (min-width: 1024px){
+main .main-index div.main-index-txt h1{
+  font-size: 2.5rem;
+  padding-right: 8rem;
+}
+.section-index{
+  .section-index-img{
+    margin-top: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .section-index-text {
+    padding: 3.5rem;
+  }
+}
+}

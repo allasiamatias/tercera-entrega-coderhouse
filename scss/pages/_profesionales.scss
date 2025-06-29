@@ -1,0 +1,79 @@
+@import "../abstracts/variables";
+@import"../abstracts/mixing";
+
+/* profesionales */
+.main-profesionales{
+  h1{
+    @include h1;
+  }
+  .main-profesionales-grilla{
+    display: grid;
+    gap: 2rem;
+    padding: 1rem 1rem 0 1rem;
+    img{
+        width: 35%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    .item-profesional{
+      @include flex(row);
+      align-items: center;
+      gap: 1rem;
+      justify-content: space-around;
+    }
+    .reverse{
+      flex-direction: row-reverse;
+    }
+    .item-profesional-texto{
+      color: $color-secundario;
+      @include flex(column);
+      align-items: center;
+      h2{
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+/* estilo tablet */
+@media screen and (min-width: 768px){
+.main-profesionales {
+  h1{
+    @include h1-tablet;
+  }
+    .main-profesionales-grilla{
+      margin: 0 3rem;
+      padding-bottom: 2rem;
+        div{
+          img{
+            width: 30%;
+          }
+        }
+        .item-profesional-texto{ 
+          h2{
+            font-size: 2rem;
+          }
+          p{
+            font-size: 1.5rem;
+          }
+        }
+    }
+  }
+}
+/* estilo desktop */
+@media screen and (min-width: 1024px){
+.main-profesionales .main-profesionales-grilla{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .item-profesional{
+    display: flex;
+    flex-direction: column;
+      img{
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+      }
+  }
+  }
+}

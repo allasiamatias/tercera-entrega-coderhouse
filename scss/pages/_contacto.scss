@@ -1,0 +1,96 @@
+@import "../abstracts/variables";
+@import"../abstracts/mixing";
+
+/* contacto */
+.main-contacto{
+  h1{
+    @include h1;
+  }
+  .formulario-contacto{
+    @include flex(column);
+    margin:auto;
+    max-width: 80vw;
+    label{
+      color: $color-secundario;
+      font-family:"PT Sans", sans-serif; 
+      margin-top: 1rem;
+    }
+    input{
+      background-color: $color-generico;
+      border: 1px solid $color-secundario;
+      border-radius: 8px;
+    }
+    input:focus{
+      outline: none;
+    }
+    textarea{
+      font-family:"PT Sans", sans-serif;
+      color: #000;
+      background-color: $color-generico;
+      resize:vertical;
+      min-height: 6rem;
+      max-height: 8rem;
+      border-radius: 8px;
+      border: 1px solid $color-secundario;
+      padding-left: 0.5rem;
+    }
+    textarea:focus{
+      outline: none;
+    }
+    .boton{
+      color:$color-secundario;
+      width: 25%;
+      margin: auto;
+      margin-top: 2rem;
+    }
+    .boton:hover{
+      background-color: $color-secundario;
+      color: $color-generico;
+      box-shadow: 0 0 10px $color-secundario;
+    }
+    .boton:focus{
+      background-color: $color-secundario;
+      color: $color-generico;
+      box-shadow: 0 0 60px $color-generico;
+    }
+  }
+}
+/* estilo tablet */
+@media screen and (min-width: 768px){
+  .main-contacto{
+    h1{
+      @include h1-tablet;
+    }
+    .formulario-contacto{
+      width: 70%;
+        label{
+          font-size: 1.5rem;
+        }
+        input{
+          font-size: 1.5rem;
+        }
+        textarea{
+          font-size: 1.5rem;
+        }
+    }
+  }
+}
+
+/* estilo desktop */
+@media screen and (min-width: 1024px){
+.main-contacto{
+  .formulario-contacto{
+    width: 60%;
+    padding-bottom: 1rem;
+      label{
+        font-size: 1.2rem;
+      }
+      input{
+        font-size: 1.2rem;
+      }
+      textarea{
+        font-size: 1.5rem;
+      }
+  }
+}
+}

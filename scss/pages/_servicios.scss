@@ -1,0 +1,88 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixing";
+
+/* servicios */
+.main-servicios{
+  h1{
+    @include h1;
+  }
+  .main-servicios-grid{
+    @include grid(grid, repeat(2, 1fr), none);
+    gap: 1.5rem;
+    max-width: 90vw;
+    margin: 0 1rem 1.5rem 1rem;
+    .main-servicios-card{
+      @include flex(column);
+      justify-content: space-between;
+      background-color: $color-secundario;
+      border-radius: 25px;
+      h2{
+        color: $color-generico;
+        font-family: "Quicksand", sans-serif;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 1rem;
+      }
+      img{
+          width: 100%;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 15px;
+          margin-bottom: 0.5rem;
+      }
+      p{
+        color: $color-generico;
+        font-family: "Quicksand", sans-serif;
+        text-align: center;
+        font-size: 0.65rem;
+        margin-bottom: 2rem;
+        margin: 0.5rem;
+      }
+    }
+  }
+}
+/* estilo tablet */
+@media screen and (min-width: 768px){
+  .main-servicios{
+    h1{
+      @include h1-tablet
+    }
+    .main-servicios-grid{
+      margin: auto;
+      .main-servicios-card{
+        height: 100%;
+        h2{
+          font-size: 1.5rem;
+        }
+        div{
+          img{
+            height: 200px;
+            margin: auto;
+            object-fit: cover;
+          }
+        }
+        p{
+          font-size: 1rem;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+
+/* estilo desktop */
+@media screen and (min-width: 1024px){
+  .main-servicios{
+    .main-servicios-grid{
+      @include flex(row);
+      margin-bottom: 1rem;
+        .main-servicios-card{
+          width: 100%;
+          height: 380px;
+            p{
+              font-size: 0.9rem;
+            }
+        }
+      }
+    }
+}

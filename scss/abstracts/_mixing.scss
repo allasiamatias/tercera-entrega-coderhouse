@@ -1,0 +1,35 @@
+
+@mixin grid ($grid, $colums, $row){
+  display: $grid;
+  grid-template-columns: $colums;
+  grid-template-rows: $row;
+}
+
+@mixin footer{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin h1{
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  padding: 0 0 1.5rem 1rem;
+  color:$color-secundario;
+  font-family: "PT Sans", sans-serif;
+  font-style: italic;
+  font-weight: 700;
+}
+
+@mixin flex($direction){
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin h1-tablet{
+  font-size: 2.5rem;
+  padding-left: 4rem;
+}
+
