@@ -311,8 +311,8 @@ section .section-index-text span {
   font-family: "Quicksand", sans-serif;
   text-align: center;
   font-size: 0.65rem;
-  margin-bottom: 2rem;
-  margin: 0.5rem;
+  margin: auto;
+  margin: 0.5rem 0 1rem;
 }
 
 /* estilo tablet */
