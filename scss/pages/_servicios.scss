@@ -14,10 +14,10 @@
     .main-servicios-card{
       @include flex(column);
       justify-content: space-between;
-      background-color: $color-secundario;
+      background-color: $color-principal;
       border-radius: 25px;
       h2{
-        color: $color-generico;
+        color: $color-secundario;
         font-family: "Quicksand", sans-serif;
         text-align: center;
         font-size: 1rem;
@@ -27,11 +27,10 @@
           width: 100%;
           height: 100px;
           object-fit: cover;
-          border-radius: 15px;
           margin-bottom: 0.5rem;
       }
       p{
-        color: $color-generico;
+        color: $color-secundario;
         font-family: "Quicksand", sans-serif;
         text-align: center;
         font-size: 0.65rem;
